@@ -1,261 +1,358 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      .img {
+        background-image: url("imagens/scMapaMundo.svg");
+        background-size: cover;
+        background-position: center;
+        object-fit: contain;
+      }
+      .imgEntrevistaDeEmpregoAzul {
+        background-image: url("imagens/EntrevistaDeEmpregoAzul.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: contain;
+      }
+      .imgEntrevistaDeEmpregoSimples {
+        background-image: url("imagens/EntrevistaDeEmpregoSimples.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: fill;
+      }
+      .imgEntrevistaDeEmpregoLilas {
+        background-image: url("imagens/EntrevistaDeEmpregoLilas.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: fill;
+      }
 
-        
+      /* crie uma variavel para essa cor       #FF5722 com o nome laranja */
+      :root {
+        --orange: #ff5722;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* estilização somente para periodo de teste */
 
-
-        .img{
-            background-image: url('imagens/scMapaMundo.svg');
-            background-size: cover;
-            background-position: center;
-            object-fit: contain;
-           
-        }
-        .imgEntrevistaDeEmpregoAzul{
-            background-image: url('imagens/EntrevistaDeEmpregoAzul.jpg');
-            background-size: cover;
-            background-position: center;
-            object-fit: contain;
-           
-        }
-        .imgEntrevistaDeEmpregoSimples{
-            background-image: url('imagens/EntrevistaDeEmpregoSimples.jpg');
-            background-size: cover;
-            background-position: center;
-            object-fit: fill;
-         
-           
-        }
-        .imgEntrevistaDeEmpregoLilas{
-            background-image: url('imagens/EntrevistaDeEmpregoLilas.jpg');
-            background-size: cover;
-            background-position: center;
-            object-fit: fill;
-         
-        }
-        
-        /* crie uma variavel para essa cor       #FF5722 com o nome laranja */
-        :root {
-        --orange: #FF5722;
-        }
-        body {
-        font-family: 'Inter', sans-serif;
-      
-        
-    }
-    /* estilização somente para periodo de teste */
-
-    
-    @media (max-height: 800px){
-        .ArrowYellowTop{
-            top: 226vh !important;
-        }
-        .ArrowOrangeTop{
-            top: 116vh !important;
-        }
-    }
-    @media (min-height: 801px) and (max-height: 1399px) {
+      @media (max-height: 800px) {
         .ArrowYellowTop {
-            top: 136vh !important;
+          top: 226vh !important;
         }
         .ArrowOrangeTop {
-            top: 56vh !important;
+          top: 116vh !important;
         }
-    }
-    @media (min-height: 1400px){
-        .ArrowYellowTop{
-            top: 75vh !important;
+      }
+      @media (min-height: 801px) and (max-height: 1399px) {
+        .ArrowYellowTop {
+          top: 136vh !important;
         }
-        .ArrowOrangeTop{
-            top: 46vh !important;
+        .ArrowOrangeTop {
+          top: 56vh !important;
         }
-    }
-  
-    html{
+      }
+      @media (min-height: 1400px) {
+        .ArrowYellowTop {
+          top: 75vh !important;
+        }
+        .ArrowOrangeTop {
+          top: 46vh !important;
+        }
+      }
+
+      html {
         scroll-behavior: smooth;
-    }
-
+      }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Banco de Currículos</title>
-</head>
-<body class="relative bg-[#F1EFEF] text-[#18181B] ">
+  </head>
+  <body class="relative bg-[#F1EFEF] text-[#18181B]">
     <div class="hidden min-[890px]:flex absolute ArrowYellowTop right-0 -z-10">
-        <img class="absolute top-1/2 -translate-y-1/2 right-6" src="imagens/VectorArrows.svg" alt="">
-        <img class="h-[700px]" src="imagens/VectorElipseYellowArrows.svg" alt="">
+      <img
+        class="absolute top-1/2 -translate-y-1/2 right-6"
+        src="imagens/VectorArrows.svg"
+        alt=""
+      />
+      <img
+        class="h-[700px]"
+        src="imagens/VectorElipseYellowArrows.svg"
+        alt=""
+      />
     </div>
-    <div class="hidden min-[890px]:flex absolute ArrowOrangeTop left-0 -z-10 ">
-        <img class="absolute top-1/2 -translate-y-1/2 left-6" src="imagens/VectorArrows.svg" alt="">
-        <img class="transform scale-x-[-1] opacity-80
-        h-[700px]" src="imagens/VectorElipseOrangeArrows.svg" alt="">
+    <div class="hidden min-[890px]:flex absolute ArrowOrangeTop left-0 -z-10">
+      <img
+        class="absolute top-1/2 -translate-y-1/2 left-6"
+        src="imagens/VectorArrows.svg"
+        alt=""
+      />
+      <img
+        class="transform scale-x-[-1] opacity-80 h-[700px]"
+        src="imagens/VectorElipseOrangeArrows.svg"
+        alt=""
+      />
     </div>
-    <div class="hidden min-[890px]:flex absolute -top-24 -left-16 -z-10 opacity-80 ">
-        <img class="h-[700px]" src="imagens/VectorElipseOrange.svg" alt="">
+    <div
+      class="hidden min-[890px]:flex absolute -top-24 -left-16 -z-10 opacity-80"
+    >
+      <img class="h-[700px]" src="imagens/VectorElipseOrange.svg" alt="" />
     </div>
 
-    <header class="min-[1200px]:max-w-[1200px] 
-    min-[1200px]:grid min-[1200px]:grid-cols-12 min-[1200px]:gap-4 
-    min-[890px]:max-w-[890px] 
-    px-5 py-4 flex justify-between items-center max-w-[430px] mx-auto">
-        <div class="min-[1200px]:col-span-5
-        flex gap-1 items-center">
-            <img class="min-[890px]:w-16 w-10 " src="imagens/logo_azul.avif" alt="icone">
-            <h1 class="min-[890px]:text-3xl
-            font-bold text-2xl">Banco de Currículos</h1>
-        </div>
-        
-        <nav class="hidden min-[1200px]:flex min-[1200px]:col-span-5 gap-4
-        text-gray-600 ">
-            <a class="hover:text-gray-950 relative
-            after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out" 
-             href="#Sobre">Sobre</a>
-            <a class="relative
-            after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950" href="#Empregos/Cursos">Empregos/Cursos</a>
-            <a class="relative
-            after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950" href="#Contato">Contato</a>
-        </nav>
+    <header
+      class="min-[1200px]:max-w-[1200px] min-[1200px]:grid min-[1200px]:grid-cols-12 min-[1200px]:gap-4 min-[890px]:max-w-[890px] px-5 py-4 flex justify-between items-center max-w-[430px] mx-auto"
+    >
+      <div class="min-[1200px]:col-span-5 flex gap-1 items-center">
+        <img
+          class="min-[890px]:w-16 w-10"
+          src="imagens/logo_azul.avif"
+          alt="icone"
+        />
+        <h1 class="min-[890px]:text-3xl font-bold text-2xl">
+          Banco de Currículos
+        </h1>
+      </div>
 
-        <button class="min-[1200px]:hidden
-        size-10 bg-[#1E3A8A] px-2 rounded-md fill-white">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.!--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-        </button>
-     
-        <a class="relative
-        after:content[''] after:w-0 hover:after:w-1/2 after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out
-        
-        hidden min-[1200px]:block text-blue-900 font-bold text-2xl col-span-2" href="#">Entrar  -></a>
-     
+      <nav
+        class="hidden min-[1200px]:flex min-[1200px]:col-span-5 gap-4 text-gray-600"
+      >
+        <a
+          class="hover:text-gray-950 relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out"
+          href="#Sobre"
+          >Sobre</a
+        >
+        <a
+          class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
+          href="#Empregos/Cursos"
+          >Empregos/Cursos</a
+        >
+        <a
+          class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
+          href="#Contato"
+          >Contato</a
+        >
+      </nav>
+
+      <button
+        class="min-[1200px]:hidden size-10 bg-[#1E3A8A] px-2 rounded-md fill-white"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.!-->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </button>
+
+      <a
+        class="relative after:content[''] after:w-0 hover:after:w-1/2 after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hidden min-[1200px]:block text-blue-900 font-bold text-2xl col-span-2"
+        href="#"
+        >Entrar -></a
+      >
     </header>
-    <main class="min-[890px]:max-w-[890px] 
-    max-w-[430px] mx-auto mb-16">
-        <div class="min-[890px]:w-[810px] min-[890px]:h-[300px] 
-        min-[890px]:mb-[512px] min-[890px]:mt-24
-        px-5 mb-64  img w-full mx-auto h-[147.52px] ">
-           <div class="min-[890px]:w-[810px] min-[890px]:h-[740px]
-           w-[300px] h-[325px] mx-auto relative">
-                <div class="min-[890px]:w-[272px] min-[890px]:h-[400px]
-                shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[140px] h-[205.33px] imgEntrevistaDeEmpregoLilas rounded-2xl absolute top-28 left-0 min-[890px]:translate-y-1/4 min-[890px]:translate-x-[40%]">
-                    <div class="min-[890px]:size-16
-                    size-8 rounded-full flex items-center justify-center 
-                    absolute -bottom-5 right-0 -translate-x-1/4 translate-y-full
-                    bg-[var(--orange)] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
-                        <img src="imagens/VectorAddContact.svg" class="w-[80%] p-1" alt="">
-                    </div>
-                    <div class="min-[890px]:items-center min-[890px]:justify-center min-[890px]:w-[165px]  min-[890px]:h-[56px]  min-[890px]:-translate-x-1/2
-                    flex shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-full bg-white absolute -bottom-8  left-0 -translate-x-1/3 translate-y-full gap-1 p-2">
-                        <span class="min-[890px]:text-[14px] 
-                        font-semibold text-[7.19pt]">Empregando</span>
-                        <img class="min-[890px]:h-6" src="imagens/VectorLocation.svg" alt="">
-                    </div>
-                </div>
-                <div class=" min-[890px]:w-[272px] min-[890px]:h-[300px] min-[890px]:translate-y-[20%]
-                min-[890px]:-translate-x-1/2
-                shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
-                w-[140px] h-[154px] imgEntrevistaDeEmpregoAzul rounded-2xl absolute top-12 right-0" >
-                    
-                </div>
-                <div class="min-[890px]:w-[272px] min-[890px]:h-[300px] min-[890px]:translate-y-2/3
-                min-[890px]:-translate-x-1/2
-                w-[140px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] h-[154px] imgEntrevistaDeEmpregoSimples  rounded-2xl absolute top-56 right-0" >
-                    <div class="min-[890px]:size-16
-                    size-8 rounded-full flex items-center justify-center 
-                    absolute bottom-0 right-0 translate-x-1/4 translate-y-1/3
-                    bg-[#f85e9f]
-                    shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
-                        <img src="imagens/VectorFile.svg" class="w-[80%] p-1" alt="">
-                    </div>
-                </div>
-           </div>
-        </div>
-        
-        <div  class="min-[890px]:max-w-[680px] min-[890px]:mx-auto
-        min-[890px]:items-center min-[890px]:gap-6  min-[890px]:mb-12
-        px-5 mb-6 flex flex-col gap-4">
-            <h2 class="min-[890px]:text-[56px]
-            text-[36px] font-bold text-center text-blue-900">
-                Conectando <span class="text-[var(--orange)]">São Cristóvão</span> ao mundo
-            </h2>
-            <p class="min-[890px]:text-lg min-[890px]:w-[400px] 
-            text-base text-gray-800/50 text-center">Gerando acessibilidade a empregos e cursos para o povo de São Cristóvão</p>
-            <a class="shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
-            flex gap-2 mx-auto bg-white py-3 px-5  mt-2 rounded-full" href="">
-                <span class="text-base text-[var(--orange)]">Acesse o Banco de Currículos</span>
-                <img fill="#FF5722" src="imagens/VectorSuitcase.svg" alt="vetor de maleta">
-            </a>
-        </div>
-
-        <div id="Sobre" class=" min-[890px]:max-w-[890px]  min-[890px]:mx-auto
-        
-        px-5 flex flex-col gap-4 mb-6">
-            <h2 class=" min-[890px]:text-[56px]
-            text-[36px] font-bold text-center text-blue-900">Conheça o <span class="text-[var(--orange)]">Banco de Currículos</span></h2>
-            <p class=" min-[890px]:text-center min-[890px]:text-lg
-            text-base text-gray-800/50 text-justify">O Banco de Currículos é muito mais do que uma simples plataforma, é um impulsionador de oportunidades para trabalho e geração de renda. Aqui, você terá acesso a serviços gratuitos voltados ao empreendedorismo e à qualificação profissional.</p>
-        </div>
-
-        <div id="Empregos/Cursos" class=" min-[890px]:max-w-[890px]  min-[890px]:mx-auto
-        min-[890px]:mt-12
-        flex flex-col gap-4">
-
-           
-
-
-
-            <span class="px-5 text-base text-[#F85E9F] text-center tracking-[2px]">SERVIÇOS</span>
-            <h2 class="min-[890px]:text-[56px]
-            px-5 text-[36px] font-bold text-center text-blue-900">Buscando emprego <span class="text-[var(--orange)]">e qualificação?</span></h2>
-            
-            
-            <div class="min-[890px]:max-w-[890px] min-[890px]:grid min-[890px]:grid-cols-2 min-[890px]:gap-8
-            flex flex-col gap-8 mx-auto">
-                <div class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8">
-                    <img class="size-24" src="imagens/VectorPerfilProfissional.svg"  alt="">
-                    <h3 class="text-2xl font-semibold">Perfil Profissional</h3>
-                    <a class="text-white text-base  bg-blue-900 py-3 px-5 rounded-full">Cadastre Seu Currículo</a>
-                </div>
-                <div class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8">
-                    <img class="size-24" src="imagens/VectorVagasDeEmprego.svg"  alt="">
-                    <h3 class="text-2xl font-semibold">Vagas de Emprego</h3>
-                    <a class="text-white text-base  bg-blue-900 py-3 px-5 rounded-full">Encontre Vagas</a>
-                </div>
-                <div class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8">
-                    <img class="size-24" src="imagens/VectorQualificacao.svg"  alt="">
-                    <h3 class="text-2xl font-semibold text-center">Qualificação Profissional Gratuita</h3>
-                    <a class="text-white text-base  bg-blue-900 py-3 px-5 rounded-full">Conheça os Cursos</a>
-                </div>
-                <div class="flex flex-col justify-between items-center gap-4 bg-white w-[350px] rounded-3xl p-8">
-                    <img class="size-24" src="imagens/VectorEmpresa.svg"  alt="">
-                    <h3 class="text-2xl font-semibold">Empresa</h3>
-                    <a class="text-white text-base  bg-blue-900 py-3 px-5 rounded-full">Acesse o Portal da Empresa</a>
-                </div>
+    <main class="min-[890px]:max-w-[890px] max-w-[430px] mx-auto mb-16
+    min-[1200px]:flex    min-[1200px]:flex-col min-[1200px]:items-center ">
+      <div class="min-[1200px]:flex min-[1200px]:items-center min-[1200px]:flex-row-reverse min-[1200px]:w-[1300px]
+      
+      min-[1200px]:justify-between
+      ">
+        <div
+          class="min-[890px]:w-[810px] min-[890px]:h-[300px] min-[890px]:mb-[512px] min-[890px]:mt-24 px-5 mb-64 img w-full
+          
+          mx-auto h-[147.52px]">
+          <div
+            class="min-[890px]:w-[810px] min-[890px]:h-[740px] w-[300px] h-[325px] mx-auto relative">
+            <div
+              class="min-[890px]:w-[272px] min-[890px]:h-[400px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[140px] h-[205.33px] imgEntrevistaDeEmpregoLilas rounded-2xl absolute top-28 left-0 min-[890px]:translate-y-1/4 min-[890px]:translate-x-[40%]">
+              <div
+                class="min-[890px]:size-16 size-8 rounded-full flex items-center justify-center absolute -bottom-5 right-0 -translate-x-1/4 translate-y-full bg-[var(--orange)] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+                <img
+                  src="imagens/VectorAddContact.svg"
+                  class="w-[80%] p-1"
+                  alt=""/>
+              </div>
+              <div
+                class="min-[890px]:items-center min-[890px]:justify-center min-[890px]:w-[165px] min-[890px]:h-[56px] min-[890px]:-translate-x-1/2 flex shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-full bg-white absolute -bottom-8 left-0 -translate-x-1/3 translate-y-full gap-1 p-2">
+                <span
+                  class="min-[890px]:text-[14px] font-semibold text-[7.19pt]"
+                  >Empregando</span
+                >
+                <img
+                  class="min-[890px]:h-6"
+                  src="imagens/VectorLocation.svg"
+                  alt=""
+                />
+              </div>
             </div>
+            <div
+              class="min-[890px]:w-[272px] min-[890px]:h-[300px] min-[890px]:translate-y-[20%] min-[890px]:-translate-x-1/2 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[140px] h-[154px] imgEntrevistaDeEmpregoAzul rounded-2xl absolute top-12 right-0"
+            ></div>
+            <div
+              class="min-[890px]:w-[272px] min-[890px]:h-[300px] min-[890px]:translate-y-2/3 min-[890px]:-translate-x-1/2 w-[140px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] h-[154px] imgEntrevistaDeEmpregoSimples rounded-2xl absolute top-56 right-0"
+            >
+              <div
+                class="min-[890px]:size-16 size-8 rounded-full flex items-center justify-center absolute bottom-0 right-0 translate-x-1/4 translate-y-1/3 bg-[#f85e9f] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <img src="imagens/VectorFile.svg" class="w-[80%] p-1" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div
+          class=" 
+          min-[890px]:max-w-[680px] min-[890px]:mx-auto min-[890px]:items-center min-[890px]:gap-6 min-[890px]:mb-12 px-5 mb-6 flex flex-col gap-4"
+        >
+          <h2
+            class="min-[890px]:text-[56px] text-[36px] font-bold text-center text-blue-900"
+          >
+            Conectando
+            <span class="text-[var(--orange)]">São Cristóvão</span> ao mundo
+          </h2>
+          <p
+            class="min-[890px]:text-lg min-[890px]:w-[400px] text-base text-gray-800/50 text-center"
+          >
+            Gerando acessibilidade a empregos e cursos para o povo de São
+            Cristóvão
+          </p>
+          <a
+            class="shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex gap-2 mx-auto bg-white py-3 px-5 mt-2 rounded-full"
+            href=""
+          >
+            <span class="text-base text-[var(--orange)]"
+              >Acesse o Banco de Currículos</span
+            >
+            <img
+              fill="#FF5722"
+              src="imagens/VectorSuitcase.svg"
+              alt="vetor de maleta"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        id="Sobre"
+        class="min-[890px]:max-w-[890px] min-[890px]:mx-auto px-5 flex flex-col gap-4 mb-6"
+      >
+        <h2
+          class="min-[890px]:text-[56px] text-[36px] font-bold text-center text-blue-900"
+        >
+          Conheça o
+          <span class="text-[var(--orange)]">Banco de Currículos</span>
+        </h2>
+        <p
+          class="min-[890px]:text-center min-[890px]:text-lg text-base text-gray-800/50 text-justify"
+        >
+          O Banco de Currículos é muito mais do que uma simples plataforma, é um
+          impulsionador de oportunidades para trabalho e geração de renda. Aqui,
+          você terá acesso a serviços gratuitos voltados ao empreendedorismo e à
+          qualificação profissional.
+        </p>
+      </div>
+
+      <div
+        id="Empregos/Cursos"
+        class="min-[890px]:max-w-[890px] min-[890px]:mx-auto min-[890px]:mt-12 flex flex-col gap-4"
+      >
+        <span class="px-5 text-base text-[#F85E9F] text-center tracking-[2px]"
+          >SERVIÇOS</span
+        >
+        <h2
+          class="min-[890px]:text-[56px] px-5 text-[36px] font-bold text-center text-blue-900"
+        >
+          Buscando emprego
+          <span class="text-[var(--orange)]">e qualificação?</span>
+        </h2>
+
+        <div
+          class="min-[890px]:max-w-[890px] min-[890px]:grid min-[890px]:grid-cols-2 min-[890px]:gap-8 flex flex-col gap-8 mx-auto"
+        >
+          <div
+            class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8"
+          >
+            <img
+              class="size-24"
+              src="imagens/VectorPerfilProfissional.svg"
+              alt=""
+            />
+            <h3 class="text-2xl font-semibold">Perfil Profissional</h3>
+            <a class="text-white text-base bg-blue-900 py-3 px-5 rounded-full"
+              >Cadastre Seu Currículo</a
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8"
+          >
+            <img
+              class="size-24"
+              src="imagens/VectorVagasDeEmprego.svg"
+              alt=""
+            />
+            <h3 class="text-2xl font-semibold">Vagas de Emprego</h3>
+            <a class="text-white text-base bg-blue-900 py-3 px-5 rounded-full"
+              >Encontre Vagas</a
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8"
+          >
+            <img class="size-24" src="imagens/VectorQualificacao.svg" alt="" />
+            <h3 class="text-2xl font-semibold text-center">
+              Qualificação Profissional Gratuita
+            </h3>
+            <a class="text-white text-base bg-blue-900 py-3 px-5 rounded-full"
+              >Conheça os Cursos</a
+            >
+          </div>
+          <div
+            class="flex flex-col justify-between items-center gap-4 bg-white w-[350px] rounded-3xl p-8"
+          >
+            <img class="size-24" src="imagens/VectorEmpresa.svg" alt="" />
+            <h3 class="text-2xl font-semibold">Empresa</h3>
+            <a class="text-white text-base bg-blue-900 py-3 px-5 rounded-full"
+              >Acesse o Portal da Empresa</a
+            >
+          </div>
+        </div>
+      </div>
     </main>
-    <footer id="Contato" class="min-[890px]:max-w-[890px] min-[890px]:mx-auto
-    px-5 pb-8">
+    <footer
+      id="Contato"
+      class="min-[890px]:max-w-[890px] min-[890px]:mx-auto px-5 pb-8"
+    >
+      <div>
         <div>
-            <div>
-                <div class="flex gap-1 items-center">
-                    <img class="w-10" src="imagens/logo_azul.avif" alt="icone">
-                    <h4 class="font-bold text-2xl
-                    min-[890px]:text-3xl">Banco de Currículos</h4>
-                </div>
-                <p class="ml-12">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente quaerat non consectetur, recusandae sunt pariatur excepturi id numquam totam earum voluptatem aspernatur adipisci nam molestias nemo corporis facere optio! Quis?</p>
-            </div>
-            <div class="ml-11 flex flex-col mt-4 gap-4">
-                <h4 class="font-bold text-2xl min-[890px]:text-3xl">Contate-nos</h4>
-                <p class="ml-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente quaerat non consectetur, recusandae sunt pariatur excepturi id numquam totam earum voluptatem aspernatur adipisci nam molestias nemo corporis facere optio! Quis?</p>
-            </div>
-    
+          <div class="flex gap-1 items-center">
+            <img class="w-10" src="imagens/logo_azul.avif" alt="icone" />
+            <h4 class="font-bold text-2xl min-[890px]:text-3xl">
+              Banco de Currículos
+            </h4>
+          </div>
+          <p class="ml-12">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            quaerat non consectetur, recusandae sunt pariatur excepturi id
+            numquam totam earum voluptatem aspernatur adipisci nam molestias
+            nemo corporis facere optio! Quis?
+          </p>
         </div>
+        <div class="ml-11 flex flex-col mt-4 gap-4">
+          <h4 class="font-bold text-2xl min-[890px]:text-3xl">Contate-nos</h4>
+          <p class="ml-1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            quaerat non consectetur, recusandae sunt pariatur excepturi id
+            numquam totam earum voluptatem aspernatur adipisci nam molestias
+            nemo corporis facere optio! Quis?
+          </p>
+        </div>
+      </div>
     </footer>
-    
-</body>
+  </body>
 </html>
