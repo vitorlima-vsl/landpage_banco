@@ -132,15 +132,16 @@
       ">
       </Button>
     </div>
-    <aside id="sidebar" class="hidden  h-[100svh] bg-[#f1efef] absolute top-0 right-0 z-50 flex-col items-center justify-between gap-8 p-4 fade-in">
-      <div class="w-full flex justify-end">
-        <a class="text-2xl text-blue-900 font-semibold text-nowrap" href="#">Entrar -></a>
-      </div>
-      <nav class="mt-24 flex flex-col gap-2 items-center text-xl font-semibold">
+    <aside id="sidebar" class="hidden  h-[100svh] bg-[#f1efef] absolute top-0 right-0 z-50 flex-col items-center justify-center gap-8 p-4 fade-in">
+ 
+        <a class="absolute right-4 top-4 text-2xl text-blue-900 font-semibold text-nowrap" href="#">Entrar -></a>
+    
+      <nav class=" flex flex-col gap-2 items-center text-xl font-semibold">
         <a onclick="hideSidebar()" href="#Sobre">Sobre</a>
         <a onclick="hideSidebar()" href="#Empregos/Cursos">Empregos/Cursos</a>
         <a onclick="hideSidebar()" href="#Contato">Contato</a>
       </nav>
+      
     </aside>
 
 
@@ -165,39 +166,39 @@
       <nav
         class="hidden min-[1200px]:flex min-[1200px]:col-span-5 gap-4 text-gray-600"
       >
-        <a
-          class="hover:text-gray-950 relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out"
-          href="#Sobre"
-          >Sobre</a
-        >
-        <a
-          class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
-          href="#Empregos/Cursos"
-          >Empregos/Cursos</a
-        >
-        <a
-          class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
-          href="#Contato"
-          >Contato</a
-        >
-      </nav>
-
-      <button
-        class="min-[1200px]:hidden size-10 bg-[#1E3A8A] px-2 rounded-md fill-white"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.!-->
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-          />
-        </svg>
-      </button>
-
       <a
-        class="relative after:content[''] after:w-0 hover:after:w-1/2 after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hidden min-[1200px]:block text-blue-900 font-bold text-2xl col-span-2"
-        href="#"
-        >Entrar -></a
-      >
+      class="hover:text-gray-950 relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out"
+      href="#Sobre"
+      >Sobre</a
+    >
+    <a
+      class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
+      href="#Empregos/Cursos"
+      >Empregos/Cursos</a
+    >
+    <a
+      class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
+      href="#Contato"
+      >Contato</a
+    >
+  </nav>
+
+  <button id="menu"
+    class="min-[890px]:hidden size-10 bg-[#1E3A8A] px-2 rounded-md fill-white"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.!-->
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+      />
+    </svg>
+  </button>
+
+  <a
+    class="relative after:content[''] after:w-0 hover:after:w-1/2 after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hidden min-[890px]:block text-blue-900 font-bold text-2xl col-span-2"
+    href="#"
+    >Entrar -></a
+  >
     </header>
     <main class="min-[890px]:max-w-[890px] max-w-[430px] mx-auto mb-16
     min-[1200px]:flex    min-[1200px]:flex-col min-[1200px]:items-center ">
