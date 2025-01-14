@@ -66,6 +66,24 @@
       html {
         scroll-behavior: smooth;
       }
+
+      .fade-in {
+        width: 0;
+        opacity: 0;
+        transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+      .fade-in.show {
+        width: 80%;
+        opacity: 1;
+      }
+      .fade-in-bg {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .fade-in-bg.show-bg {
+        opacity: 1;
+      }
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -105,6 +123,28 @@
     >
       <img class="h-[700px]" src="imagens/VectorElipseOrange.svg" alt="" />
     </div>
+
+
+    <div id="bgSidebar" class=" hidden absolute top-0 left-0 bg-black/60 h-[100svh] w-[0svw] z-40 ">
+      <Button class="absolute top-4 left-4 size-10 border-2 px-2 rounded-md fill-white 
+      after:content[''] after:w-full after:h-[2px] after:bg-white after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-45
+      before:content[''] before:w-full before:h-[2px] before:bg-white before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-rotate-45
+      ">
+      </Button>
+    </div>
+    <aside id="sidebar" class="hidden  h-[100svh] bg-[#f1efef] absolute top-0 right-0 z-50 flex-col items-center justify-between gap-8 p-4 fade-in">
+      <div class="w-full flex justify-end">
+        <a class="text-2xl text-blue-900 font-semibold text-nowrap" href="#">Entrar -></a>
+      </div>
+      <nav class="mt-24 flex flex-col gap-2 items-center text-xl font-semibold">
+        <a onclick="hideSidebar()" href="#Sobre">Sobre</a>
+        <a onclick="hideSidebar()" href="#Empregos/Cursos">Empregos/Cursos</a>
+        <a onclick="hideSidebar()" href="#Contato">Contato</a>
+      </nav>
+    </aside>
+
+
+
 
     <header
       class="min-[1200px]:max-w-[1200px] min-[1200px]:grid min-[1200px]:grid-cols-12 min-[1200px]:gap-4 
@@ -372,5 +412,62 @@
 
 
     </footer>
+
+
+
+
+
+    <script>
+      const menuBtn = document.getElementById("menu");
+      const sidebar = document.getElementById("sidebar");
+      const bgSidebar = document.getElementById("bgSidebar");
+      console.log(menuBtn, sidebar, bgSidebar);
+    
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.remove("hidden");
+        sidebar.classList.add("flex");
+    
+        bgSidebar.classList.remove("hidden");
+        bgSidebar.classList.remove("w-[0svw]");
+        bgSidebar.classList.add("w-[100svw]");
+    
+    
+        sidebar.classList.add("fade-in");
+        bgSidebar.classList.add("fade-in-bg");
+        setTimeout(() => {
+          sidebar.classList.add("show");
+          bgSidebar.classList.add("show-bg");
+        }, 10); 
+
+      
+        document.body.style.overflow = "hidden";
+
+      });
+      bgSidebar.addEventListener("click", () => {
+        hideSidebar();
+      });
+      function hideSidebar() {
+        sidebar.classList.add("hidden");
+        sidebar.classList.remove("flex");
+    
+        bgSidebar.classList.add("hidden");
+        bgSidebar.classList.remove("w-[100svw]");
+        bgSidebar.classList.add("w-[0svw]");
+        
+
+        sidebar.classList.remove("fade-in");
+        bgSidebar.classList.remove("fade-in-bg");
+        sidebar.classList.remove("show");
+        bgSidebar.classList.remove("show-bg");
+
+      
+        document.body.style.overflow = "auto";
+      }
+     
+
+
+
+    </script>
+    
   </body>
 </html>
