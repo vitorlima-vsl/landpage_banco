@@ -84,6 +84,53 @@
         opacity: 1;
       }
 
+
+
+      .brilho-btn{
+  
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.1s ease-in-out;
+      }
+      .brilho-btn:hover{
+        transform: scale(1.01);
+      }
+
+    .brilho-btn:hover::before {
+      animation: brilho 1.5s ease-in ;
+      width: 100%;
+    }
+
+    .brilho-btn::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+      );
+      top: 0;
+      left: -105%;
+      opacity: 0.6;
+    }
+
+      @keyframes brilho {
+        0% {
+          left: -105%;
+        }
+
+        60% {
+          left: 100%;
+        }
+
+        to {
+          left: 100%;
+        }
+      }
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -268,7 +315,7 @@
             Gerando acessibilidade a empregos e cursos para o povo de [nome-cidade].
           </p>
           <a
-            class="shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex gap-2 mx-auto bg-white py-3 px-5 mt-2 rounded-full"
+            class="shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex gap-2 mx-auto bg-white py-3 px-5 mt-2 rounded-full brilho-btn"
             href=""
           >
             <span class="text-base text-[var(--orange)]"
