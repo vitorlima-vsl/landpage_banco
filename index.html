@@ -129,23 +129,25 @@
 
 
 
-    <div id="bgSidebar" class=" hidden absolute top-0 left-0 bg-black/60 h-[100svh] w-[0svw] z-40 ">
+    <div id="bgSidebar" class=" hidden absolute top-0 left-0 bg-black/60 h-full w-[0svw] z-40 ">
       <Button class="absolute top-4 left-4 size-10 border-2 px-2 rounded-md fill-white 
       after:content[''] after:w-full after:h-[2px] after:bg-white after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-45
       before:content[''] before:w-full before:h-[2px] before:bg-white before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-rotate-45
       ">
       </Button>
     </div>
-    <aside id="sidebar" class="hidden  h-[100svh] bg-[#f1efef] absolute top-0 right-0 z-50 flex-col items-center justify-between gap-8 p-4 fade-in">
-      <div class="w-full flex justify-end">
-        <a class="text-2xl text-blue-900 font-semibold text-nowrap" href="#">Entrar -></a>
+    <aside id="sidebar" class="hidden  h-full bg-[#f1efef] absolute top-0 right-0 z-50 fade-in items-center justify-center">
+      <div class="flex flex-col items-center justify-between gap-8 p-4 h-[90vh] w-full absolute top-0 left-0">
+        <div class="w-full flex justify-end">
+          <a class="text-2xl text-blue-900 font-semibold text-nowrap" href="#">Entrar -></a>
+        </div>
+        <nav class="mt-24 flex flex-col gap-2 items-center text-xl font-semibold">
+          <a onclick="hideSidebar()" href="#Sobre">Sobre</a>
+          <a onclick="hideSidebar()" href="#Empregos/Cursos">Empregos/Cursos</a>
+          <a onclick="hideSidebar()" href="#Contato">Contato</a>
+        </nav>
+        <img class="h-56 " src="imagens/logo_azul.avif" alt="">
       </div>
-      <nav class="mt-24 flex flex-col gap-2 items-center text-xl font-semibold">
-        <a onclick="hideSidebar()" href="#Sobre">Sobre</a>
-        <a onclick="hideSidebar()" href="#Empregos/Cursos">Empregos/Cursos</a>
-        <a onclick="hideSidebar()" href="#Contato">Contato</a>
-      </nav>
-      <img class="h-56 mb-4" src="imagens/logo_azul.avif" alt="">
     </aside>
 
     <header
@@ -432,6 +434,9 @@
       console.log(menuBtn, sidebar, bgSidebar);
     
       menuBtn.addEventListener("click", () => {
+
+        window.scrollTo(0, 0);
+
         sidebar.classList.remove("hidden");
         sidebar.classList.add("flex");
     
@@ -447,6 +452,7 @@
           bgSidebar.classList.add("show-bg");
         }, 10); 
 
+        
       
         document.body.style.overflow = "hidden";
 
