@@ -6,25 +6,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .img {
-        background-image: url("imagens/scMapaMundo.svg");
+        background-image: url("../imagens/scMapaMundo.svg");
         background-size: cover;
         background-position: center;
         object-fit: contain;
       }
       .imgEntrevistaDeEmpregoAzul {
-        background-image: url("imagens/EntrevistaDeEmpregoAzul.jpg");
+        background-image: url("../imagens/EntrevistaDeEmpregoAzul.jpg");
         background-size: cover;
         background-position: center;
         object-fit: contain;
       }
       .imgEntrevistaDeEmpregoSimples {
-        background-image: url("imagens/EntrevistaDeEmpregoSimples.jpg");
+        background-image: url("../imagens/EntrevistaDeEmpregoSimples.jpg");
         background-size: cover;
         background-position: center;
         object-fit: fill;
       }
       .imgEntrevistaDeEmpregoLilas {
-        background-image: url("imagens/EntrevistaDeEmpregoLilas.jpg");
+        background-image: url("../imagens/EntrevistaDeEmpregoLilas.jpg");
         background-size: cover;
         background-position: center;
         object-fit: fill;
@@ -36,7 +36,6 @@
       body {
         font-family: "Inter", sans-serif;
       }
-     
 
       @media (max-height: 800px) {
         .ArrowYellowTop {
@@ -84,38 +83,35 @@
         opacity: 1;
       }
 
-
-
-      .brilho-btn{
-  
+      .brilho-btn {
         position: relative;
         overflow: hidden;
         transition: transform 0.1s ease-in-out;
       }
-      .brilho-btn:hover{
+      .brilho-btn:hover {
         transform: scale(1.01);
       }
 
-    .brilho-btn:hover::before {
-      animation: brilho 1.5s ease-in ;
-      width: 100%;
-    }
+      .brilho-btn:hover::before {
+        animation: brilho 1.5s ease-in;
+        width: 100%;
+      }
 
-    .brilho-btn::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 30%,
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0) 70%
-      );
-      top: 0;
-      left: -105%;
-      opacity: 0.6;
-    }
+      .brilho-btn::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0) 70%
+        );
+        top: 0;
+        left: -105%;
+        opacity: 0.6;
+      }
 
       @keyframes brilho {
         0% {
@@ -130,7 +126,6 @@
           left: 100%;
         }
       }
-
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -140,146 +135,147 @@
     />
     <title>Emprega+</title>
   </head>
+  
   <body class="relative bg-[#F1EFEF] text-[#18181B]">
     <div class="hidden min-[890px]:flex absolute ArrowYellowTop right-0 -z-10">
       <img
         class="absolute top-1/2 -translate-y-1/2 right-6"
-        src="imagens/VectorArrows.svg"
+        src="../imagens/VectorArrows.svg"
         alt=""
       />
       <img
         class="h-[700px]"
-        src="imagens/VectorElipseYellowArrows.svg"
+        src="../imagens/VectorElipseYellowArrows.svg"
         alt=""
       />
     </div>
     <div class="hidden min-[890px]:flex absolute ArrowOrangeTop left-0 -z-10">
       <img
         class="absolute top-1/2 -translate-y-1/2 left-6"
-        src="imagens/VectorArrows.svg"
+        src="../imagens/VectorArrows.svg"
         alt=""
       />
       <img
         class="transform scale-x-[-1] opacity-80 h-[700px]"
-        src="imagens/VectorElipseOrangeArrows.svg"
+        src="../imagens/VectorElipseOrangeArrows.svg"
         alt=""
       />
     </div>
     <div
       class="hidden min-[890px]:flex absolute -top-24 -left-16 -z-10 opacity-80"
     >
-      <img class="h-[700px]" src="imagens/VectorElipseOrange.svg" alt="" />
+      <img class="h-[700px]" src="../imagens/VectorElipseOrange.svg" alt="" />
     </div>
 
-
-    <div id="bgSidebar" class=" hidden absolute top-0 left-0 bg-black/60 h-[100vh] w-[0svw] z-40 ">
-      <Button class="absolute top-4 left-4 size-10 border-2 px-2 rounded-md fill-white 
-      after:content[''] after:w-full after:h-[2px] after:bg-white after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-45
-      before:content[''] before:w-full before:h-[2px] before:bg-white before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-rotate-45
-      ">
-      </Button>
+    <div
+      id="bgSidebar"
+      class="hidden absolute top-0 left-0 bg-black/60 h-[100vh] w-[0svw] z-40"
+    >
+      <button
+        class="absolute top-4 left-4 size-10 border-2 px-2 rounded-md fill-white after:content[''] after:w-full after:h-[2px] after:bg-white after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-45 before:content[''] before:w-full before:h-[2px] before:bg-white before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-rotate-45"
+      ></button>
     </div>
-    <aside id="sidebar" class="hidden  h-[100vh] bg-[#f1efef] absolute top-0 right-0 z-50 flex-col items-center justify-center gap-8 p-4 fade-in">
- 
-        <a class="absolute right-4 top-4 text-2xl text-blue-900 font-semibold text-nowrap" href="#">Entrar -></a>
-    
-      <nav class=" flex flex-col gap-2 items-center text-xl font-semibold">
+    <aside
+      id="sidebar"
+      class="hidden h-[100vh] bg-[#f1efef] absolute top-0 right-0 z-50 flex-col items-center justify-center gap-8 p-4 fade-in"
+    >
+      <a
+        class="absolute right-4 top-4 text-2xl text-blue-900 font-semibold text-nowrap"
+        href="#"
+        >Entrar -></a
+      >
+
+      <nav class="flex flex-col gap-2 items-center text-xl font-semibold">
         <a onclick="hideSidebar()" href="#Sobre">Sobre</a>
         <a onclick="hideSidebar()" href="#Empregos/Cursos">Empregos/Cursos</a>
         <a onclick="hideSidebar()" href="#Contato">Contato</a>
       </nav>
-      
     </aside>
 
-
-
-
     <header
-      class="min-[1200px]:max-w-[1200px] min-[1200px]:grid min-[1200px]:grid-cols-12 min-[1200px]:gap-4 
-      min-[1200px]:px-0
-      min-[890px]:max-w-[890px] px-5 py-4 flex justify-between items-center max-w-[430px] mx-auto"
+      class="min-[1200px]:max-w-[1200px] min-[1200px]:grid min-[1200px]:grid-cols-12 min-[1200px]:gap-4 min-[1200px]:px-0 min-[890px]:max-w-[890px] px-5 py-4 flex justify-between items-center max-w-[430px] mx-auto"
     >
       <div class="min-[1200px]:col-span-5 flex gap-1 items-center">
         <img
           class="min-[890px]:w-24 w-10"
-          src="imagens/logo__dev.png"
+          src="../imagens/logo__dev.png"
           alt="icone"
         />
-        <h1 class="min-[890px]:text-3xl font-bold text-2xl">
-          Emprega+
-        </h1>
+        <h1 class="min-[890px]:text-3xl font-bold text-2xl ">Emprega+</h1>
       </div>
 
       <nav
         class="hidden min-[890px]:flex min-[1200px]:col-span-5 gap-4 text-gray-600"
       >
+        <a
+          class="hover:text-gray-950 relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out"
+          href="#Sobre"
+          >Sobre</a
+        >
+        <a
+          class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
+          href="#Empregos/Cursos"
+          >Empregos/Cursos</a
+        >
+        <a
+          class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
+          href="#Contato"
+          >Contato</a
+        >
+      </nav>
+
+      <button
+        id="menu"
+        class="min-[890px]:hidden size-10 bg-[#1E3A8A] px-2 rounded-md fill-white"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.!-->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </button>
+
       <a
-      class="hover:text-gray-950 relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out"
-      href="#Sobre"
-      >Sobre</a
-    >
-    <a
-      class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
-      href="#Empregos/Cursos"
-      >Empregos/Cursos</a
-    >
-    <a
-      class="relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hover:text-gray-950"
-      href="#Contato"
-      >Contato</a
-    >
-  </nav>
-
-  <button id="menu"
-    class="min-[890px]:hidden size-10 bg-[#1E3A8A] px-2 rounded-md fill-white"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.!-->
-      <path
-        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-      />
-    </svg>
-  </button>
-
-  <a
-    class="relative after:content[''] after:w-0 hover:after:w-1/2 
-    max-[1199px]:hover:after:w-full
-    after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hidden min-[890px]:block text-blue-900 font-bold text-2xl col-span-2"
-    href="#"
-    >Entrar -></a
-  >
+        class="relative after:content[''] after:w-0 hover:after:w-1/2 max-[1199px]:hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out hidden min-[890px]:block text-blue-900 font-bold text-2xl col-span-2"
+        href="#"
+        >Entrar -></a
+      >
     </header>
-    <main class="min-[890px]:max-w-[890px] max-w-[430px] mx-auto mb-16
-    min-[1200px]:flex    min-[1200px]:flex-col min-[1200px]:items-center ">
-      
-    <div class="min-[1200px]:flex min-[1200px]:items-center min-[1200px]:flex-row-reverse min-[1200px]:max-w-[1200px]
-      
-      min-[1200px]:justify-between
-      ">
+    <main
+      class="min-[890px]:max-w-[890px] max-w-[430px] mx-auto mb-16 min-[1200px]:flex min-[1200px]:flex-col min-[1200px]:items-center"
+    >
+      <div
+        class="min-[1200px]:flex min-[1200px]:items-center min-[1200px]:flex-row-reverse min-[1200px]:max-w-[1200px] min-[1200px]:justify-between"
+      >
         <div
-          class="min-[890px]:w-[810px] min-[890px]:h-[300px] min-[890px]:mb-[512px] min-[890px]:mt-24 px-5 mb-64 img w-full
-          min-[1200px]:px-0
-          mx-auto h-[147.52px]">
+          class="min-[890px]:w-[810px] min-[890px]:h-[300px] min-[890px]:mb-[512px] min-[890px]:mt-24 px-5 mb-64 img w-full min-[1200px]:px-0 mx-auto h-[147.52px]"
+        >
           <div
-            class="min-[890px]:w-[810px] min-[890px]:h-[740px] w-[300px] h-[325px] mx-auto relative">
+            class="min-[890px]:w-[810px] min-[890px]:h-[740px] w-[300px] h-[325px] mx-auto relative"
+          >
             <div
-              class="min-[890px]:w-[272px] min-[890px]:h-[400px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[140px] h-[205.33px] imgEntrevistaDeEmpregoLilas rounded-2xl absolute top-28 left-0 min-[890px]:translate-y-1/4 min-[890px]:translate-x-[40%]">
+              class="min-[890px]:w-[272px] min-[890px]:h-[400px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[140px] h-[205.33px] imgEntrevistaDeEmpregoLilas rounded-2xl absolute top-28 left-0 min-[890px]:translate-y-1/4 min-[890px]:translate-x-[40%]"
+            >
               <div
-                class="min-[890px]:size-16 size-8 rounded-full flex items-center justify-center absolute -bottom-5 right-0 -translate-x-1/4 translate-y-full bg-[var(--orange)] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+                class="min-[890px]:size-16 size-8 rounded-full flex items-center justify-center absolute -bottom-5 right-0 -translate-x-1/4 translate-y-full bg-[var(--orange)] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+              >
                 <img
-                  src="imagens/VectorAddContact.svg"
+                  src="../imagens/VectorAddContact.svg"
                   class="w-[80%] p-1"
-                  alt=""/>
+                  alt=""
+                />
               </div>
               <div
-                class="min-[890px]:items-center min-[890px]:justify-center min-[890px]:w-[165px] min-[890px]:h-[56px] min-[890px]:-translate-x-1/2 flex shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-full bg-white absolute -bottom-8 left-0 -translate-x-1/3 translate-y-full gap-1 p-2">
+                class="min-[890px]:items-center min-[890px]:justify-center min-[890px]:w-[165px] min-[890px]:h-[56px] min-[890px]:-translate-x-1/2 flex shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-full bg-white absolute -bottom-8 left-0 -translate-x-1/3 translate-y-full gap-1 p-2"
+              >
                 <span
                   class="min-[890px]:text-[14px] font-semibold text-[7.19pt]"
                   >Empregando</span
                 >
                 <img
                   class="min-[890px]:h-6"
-                  src="imagens/VectorLocation.svg"
+                  src="../imagens/VectorLocation.svg"
                   alt=""
                 />
               </div>
@@ -293,17 +289,14 @@
               <div
                 class="min-[890px]:size-16 size-8 rounded-full flex items-center justify-center absolute bottom-0 right-0 translate-x-1/4 translate-y-1/3 bg-[#f85e9f] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
               >
-                <img src="imagens/VectorFile.svg" class="w-[80%] p-1" alt="" />
+                <img src="../imagens/VectorFile.svg" class="w-[80%] p-1" alt="" />
               </div>
             </div>
           </div>
         </div>
 
         <div
-          class=" 
-          min-[890px]:max-w-[680px] min-[890px]:mx-auto min-[890px]:items-center min-[890px]:gap-6 min-[890px]:mb-12 
-          min-[1200px]:px-0
-          px-5 mb-6 flex flex-col gap-4"
+          class="min-[890px]:max-w-[680px] min-[890px]:mx-auto min-[890px]:items-center min-[890px]:gap-6 min-[890px]:mb-12 min-[1200px]:px-0 px-5 mb-6 flex flex-col gap-4"
         >
           <h2
             class="min-[890px]:text-[56px] text-[36px] font-bold text-center text-blue-900"
@@ -314,7 +307,8 @@
           <p
             class="min-[890px]:text-lg min-[890px]:w-[400px] text-base text-gray-800/50 text-center"
           >
-            Gerando acessibilidade a empregos e cursos para o povo de [nome-cidade].
+            Gerando acessibilidade a empregos e cursos para o povo de
+            [nome-cidade].
           </p>
           <a
             class="shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex gap-2 mx-auto bg-white py-3 px-5 mt-2 rounded-full brilho-btn"
@@ -325,7 +319,7 @@
             >
             <img
               fill="#FF5722"
-              src="imagens/VectorSuitcase.svg"
+              src="../imagens/VectorSuitcase.svg"
               alt="vetor de maleta"
             />
           </a>
@@ -334,12 +328,10 @@
 
       <div
         id="Sobre"
-        class="min-[1200px]:max-w-[1200px]
-        min-[890px]:max-w-[890px] px-5 flex flex-col gap-4 mb-6"
+        class="min-[1200px]:max-w-[1200px] min-[890px]:max-w-[890px] px-5 flex flex-col gap-4 mb-6"
       >
         <h2
-          class=" min-[1200px]:text-nowrap
-          min-[890px]:text-[56px] text-[36px] font-bold text-center text-blue-900"
+          class="min-[1200px]:text-nowrap min-[890px]:text-[56px] text-[36px] font-bold text-center text-blue-900"
         >
           Conheça o
           <span class="text-[var(--orange)]">Emprega+</span>
@@ -356,15 +348,13 @@
 
       <div
         id="Empregos/Cursos"
-        class="min-[1200px]:max-w-[1200px]
-        min-[890px]:max-w-[890px] min-[890px]:mx-auto min-[890px]:mt-12 flex flex-col gap-4"
+        class="min-[1200px]:max-w-[1200px] min-[890px]:max-w-[890px] min-[890px]:mx-auto min-[890px]:mt-12 flex flex-col gap-4"
       >
         <span class="px-5 text-base text-[#F85E9F] text-center tracking-[2px]"
           >SERVIÇOS</span
         >
         <h2
-          class="min-[1200px]:text-nowrap
-          min-[890px]:text-[56px] px-5 text-[36px] font-bold text-center text-blue-900"
+          class="min-[1200px]:text-nowrap min-[890px]:text-[56px] px-5 text-[36px] font-bold text-center text-blue-900"
         >
           Buscando emprego
           <span class="text-[var(--orange)]">e qualificação?</span>
@@ -378,7 +368,7 @@
           >
             <img
               class="size-24"
-              src="imagens/VectorPerfilProfissional.svg"
+              src="../imagens/VectorPerfilProfissional.svg"
               alt=""
             />
             <h3 class="text-2xl font-semibold">Perfil Profissional</h3>
@@ -391,7 +381,7 @@
           >
             <img
               class="size-24"
-              src="imagens/VectorVagasDeEmprego.svg"
+              src="../imagens/VectorVagasDeEmprego.svg"
               alt=""
             />
             <h3 class="text-2xl font-semibold">Vagas de Emprego</h3>
@@ -402,7 +392,7 @@
           <div
             class="flex flex-col items-center gap-4 bg-white w-[350px] rounded-3xl p-8"
           >
-            <img class="size-24" src="imagens/VectorQualificacao.svg" alt="" />
+            <img class="size-24" src="../imagens/VectorQualificacao.svg" alt="" />
             <h3 class="text-2xl font-semibold text-center">
               Qualificação Profissional Gratuita
             </h3>
@@ -413,7 +403,7 @@
           <div
             class="flex flex-col justify-between items-center gap-4 bg-white w-[350px] rounded-3xl p-8"
           >
-            <img class="size-24" src="imagens/VectorEmpresa.svg" alt="" />
+            <img class="size-24" src="../imagens/VectorEmpresa.svg" alt="" />
             <h3 class="text-2xl font-semibold">Empresa</h3>
             <a class="text-white text-base bg-blue-900 py-3 px-5 rounded-full"
               >Acesse o Portal da Empresa</a
@@ -424,76 +414,69 @@
     </main>
     <footer
       id="Contato"
-      class="min-[1200px]:max-w-[1200px] 
-    
-      min-[890px]:max-w-[890px] min-[890px]:mx-auto px-5 pb-8"
+      class="min-[1200px]:max-w-[1200px] min-[890px]:max-w-[890px] min-[890px]:mx-auto px-5 pb-8"
     >
-    
-      <div class="flex gap-2 items-start  flex-row">
-        <img class="w-10 min-[890px]:w-24" src="imagens/logo__dev.png" alt="icone" />
-        <div class=" min-[890px]:flex min-[890px]:justify-between">
-            <div class="min-[890px]:w-[48%]">
-              <div class="flex gap-2 items-center">
-                <h4 class="font-bold text-2xl min-[890px]:text-3xl text-blue-900">
-                  Emprega+
-                </h4>
-              </div>
-              <p class="text-justify">
-                O Emprega+ é muito mais do que uma simples plataforma, é um
-                impulsionador de oportunidades para trabalho e geração de renda. Aqui,
-                você terá acesso a serviços gratuitos voltados ao empreendedorismo e à
-                qualificação profissional.
-              </p>
+      <div class="flex gap-2 items-start flex-row">
+        <img
+          class="w-10 min-[890px]:w-24"
+          src="../imagens/logo__dev.png"
+          alt="icone"
+        />
+        <div class="min-[890px]:flex min-[890px]:justify-between">
+          <div class="min-[890px]:w-[48%]">
+            <div class="flex gap-2 items-center">
+              <h4 class="font-bold text-2xl min-[890px]:text-3xl text-blue-900">
+                Emprega+
+              </h4>
             </div>
-            <div class="flex flex-col mt-4 min-[890px]:mt-0 min-[890px]:w-[48%]">
-              <h4 class="font-bold text-2xl min-[890px]:text-3xl text-blue-900">Contate-nos</h4>
-              <p class="">
-                <span class="font-semibold text-[var(--orange)]">Endereço:</span> Rua A, nº 123, Bairro
-                Cidade, São Cristóvão - SE
-                <!-- telefone-->
-                <br />
-                <span class="font-semibold text-[var(--orange)]">Telefone:</span> (79) 99999-9999
-              </p>
-            </div>
-         </div>
-    </div>
-
-
-
-
+            <p class="text-justify">
+              O Emprega+ é muito mais do que uma simples plataforma, é um
+              impulsionador de oportunidades para trabalho e geração de renda.
+              Aqui, você terá acesso a serviços gratuitos voltados ao
+              empreendedorismo e à qualificação profissional.
+            </p>
+          </div>
+          <div class="flex flex-col mt-4 min-[890px]:mt-0 min-[890px]:w-[48%]">
+            <h4 class="font-bold text-2xl min-[890px]:text-3xl text-blue-900">
+              Contate-nos
+            </h4>
+            <p class="">
+              <span class="font-semibold text-[var(--orange)]">Endereço:</span>
+              Rua A, nº 123, Bairro Cidade, São Cristóvão - SE
+              <!-- telefone-->
+              <br />
+              <span class="font-semibold text-[var(--orange)]">Telefone:</span>
+              (79) 99999-9999
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
-
-
-
-
 
     <script>
       const menuBtn = document.getElementById("menu");
       const sidebar = document.getElementById("sidebar");
       const bgSidebar = document.getElementById("bgSidebar");
       console.log(menuBtn, sidebar, bgSidebar);
-    
+
       menuBtn.addEventListener("click", () => {
-      window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
 
         sidebar.classList.remove("hidden");
         sidebar.classList.add("flex");
-    
+
         bgSidebar.classList.remove("hidden");
         bgSidebar.classList.remove("w-[0svw]");
         bgSidebar.classList.add("w-[100svw]");
-    
-    
+
         sidebar.classList.add("fade-in");
         bgSidebar.classList.add("fade-in-bg");
         setTimeout(() => {
           sidebar.classList.add("show");
           bgSidebar.classList.add("show-bg");
-        }, 10); 
+        }, 10);
 
-      
         document.body.style.overflow = "hidden";
-
       });
       bgSidebar.addEventListener("click", () => {
         hideSidebar();
@@ -501,25 +484,18 @@
       function hideSidebar() {
         sidebar.classList.add("hidden");
         sidebar.classList.remove("flex");
-    
+
         bgSidebar.classList.add("hidden");
         bgSidebar.classList.remove("w-[100svw]");
         bgSidebar.classList.add("w-[0svw]");
-        
 
         sidebar.classList.remove("fade-in");
         bgSidebar.classList.remove("fade-in-bg");
         sidebar.classList.remove("show");
         bgSidebar.classList.remove("show-bg");
 
-      
         document.body.style.overflow = "auto";
       }
-     
-
-
-
     </script>
-    
   </body>
 </html>

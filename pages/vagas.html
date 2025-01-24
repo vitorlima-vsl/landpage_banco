@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>
+
+    <!-- Title -->
+    <title>Vagas</title>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style -->
+    <style>
+        :root {
+            --orange: #ff5722;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F1EFEF]">
+    <header class=" bg-white shadow-sm">
+        <div class="w-[1200px] flex justify-between items-center mx-auto py-4 gap-8">
+            <h1 class="text-xl font-bold">Emprega+</h1>
+
+            <div class="flex-1 relative">
+                <form action="" method="get">
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Pesquisar vagas"
+                        class="w-full px-6 py-2 border border-gray-300 rounded-3xl focus:outline-none"
+                    />
+                </form>
+                <button type="submit" class="absolute right-6 top-1/2 transform -translate-y-1/2">
+                    <i class="fas fa-search text-gray-500"></i>
+                </button>
+            </div>
+            
+            <a
+                href="#"
+                class="text-blue-900 font-bold text-xl relative after:content[''] after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-in-out"
+            >
+                Entrar ->
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="w-[1200px] mx-auto mt-8">
+            <div class="flex gap-4 justify-center">
+                <button class="text-sm font-semibold bg-[var(--orange)] py-1 px-3 rounded-full w-fit text-white">
+                    <i class="fas fa-briefcase mr-1"></i> Vagas
+                </button>
+
+                <button class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit border border-[var(--orange)] text-[var(--orange)] hover:bg-[var(--orange)] hover:text-white transition-all duration-300 ease-in-out">
+                    <i class="fas fa-graduation-cap mr-1"></i> Cursos
+                </button>
+
+                <button class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit border border-[var(--orange)] text-[var(--orange)] hover:bg-[var(--orange)] hover:text-white transition-all duration-300 ease-in-out">
+                    <i class="fas fa-users mr-1"></i> Pessoas
+                </button>
+            </div>
+
+            <!-- filtros -->
+            <div class="mt-10">
+                <div class="relative inline-block w-[250px]">
+                    <select
+                        name="area"
+                        id="area"
+                        class="w-full border-2 border-gray-300 bg-transparent font-semibold text-gray-500 rounded-full px-4 py-2 text-sm appearance-none pr-8 focus:outline-none"
+                    >
+                        <option value=""> Todas as áreas </option>
+                        <option value="1">Desenvolvimento</option>
+                        <option value="2">Design</option>
+                        <option value="3">Marketing</option>
+                        <option value="4">Vendas</option>
+                    </select>
+                    <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none"></i>
+                </div>
+
+                <div class="relative inline-block w-[250px] ml-4">
+                    <select
+                        name="area"
+                        id="area"
+                        class="w-full border-2 border-gray-300 bg-transparent font-semibold text-gray-500 rounded-full px-4 py-2 text-sm appearance-none pr-8 focus:outline-none"
+                    >
+                        <option value=""> Todas as cidades </option>
+                        <option value="1">São Paulo</option>
+                        <option value="2">Rio de Janeiro</option>
+                        <option value="3">Belo Horizonte</option>
+                        <option value="4">Curitiba</option>
+                    </select>
+                    <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none"></i>
+                </div>
+            </div>
+            
+            <!-- vagas -->
+            <div class="grid grid-cols-4 gap-4 mt-4">
+                <div class="bg-white p-[6px] rounded-2xl border border-gray-300 w-[280px] h-[320px] hover:shadow-md transition-all duration-300 ease-in-out">
+                    <div class="rounded-xl bg-blue-100 w-full h-[250px] p-4 flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-semibold bg-white py-2 px-4 rounded-full w-fit">20 May, 2023</p>
+                            <p class="text-xs font-semibold mt-4">Amazon</p>
+                            <h3 class="text-lg font-bold uppercase">Desenvolvedor Front-end</h3>
+                        </div>
+
+                        <div class="flex gap-2 flex-wrap mt-2">
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-map-marker-alt mr-1 text-[var(--orange)]"></i> São Paulo
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-dollar-sign mr-1 text-[var(--orange)]"></i> R$ 5.000,00
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-clock mr-1 text-[var(--orange)]"></i> 40h/semana
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-graduation-cap mr-1 text-[var(--orange)]"></i> Superior
+                            </p>
+                        </div>
+                    </div>
+
+                    <button 
+                        onclick="openModal()"
+                        class="text-[var(--orange)] py-1 px-4 rounded-full border border-[var(--orange)] text-[10px] float-right mt-4 font-bold uppercase   hover:bg-[var(--orange)] hover:text-white transition-all duration-300 ease-in-out"
+                    >
+                        Ver mais <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="bg-white p-[6px] rounded-2xl border border-gray-300 w-[280px] h-[320px] hover:shadow-md transition-all duration-300 ease-in-out">
+                    <div class="rounded-xl bg-blue-100 w-full h-[250px] p-4 flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-semibold bg-white py-2 px-4 rounded-full w-fit">20 May, 2023</p>
+                            <p class="text-xs font-semibold mt-4">Amazon</p>
+                            <h3 class="text-lg font-bold uppercase">Desenvolvedor Front-end</h3>
+                        </div>
+
+                        <div class="flex gap-2 flex-wrap mt-2">
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-map-marker-alt mr-1 text-[var(--orange)]"></i> São Paulo
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-dollar-sign mr-1 text-[var(--orange)]"></i> R$ 5.000,00
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-clock mr-1 text-[var(--orange)]"></i> 40h/semana
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-graduation-cap mr-1 text-[var(--orange)]"></i> Superior
+                            </p>
+                        </div>
+                    </div>
+
+                    <button 
+                        onclick="openModal()"
+                        class="text-[var(--orange)] py-1 px-4 rounded-full border border-[var(--orange)] text-[10px] float-right mt-4 font-bold uppercase   hover:bg-[var(--orange)] hover:text-white transition-all duration-300 ease-in-out"
+                    >
+                        Ver mais <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="bg-white p-[6px] rounded-2xl border border-gray-300 w-[280px] h-[320px] hover:shadow-md transition-all duration-300 ease-in-out">
+                    <div class="rounded-xl bg-blue-100 w-full h-[250px] p-4 flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-semibold bg-white py-2 px-4 rounded-full w-fit">20 May, 2023</p>
+                            <p class="text-xs font-semibold mt-4">Amazon</p>
+                            <h3 class="text-lg font-bold uppercase">Desenvolvedor Front-end</h3>
+                        </div>
+
+                        <div class="flex gap-2 flex-wrap mt-2">
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-map-marker-alt mr-1 text-[var(--orange)]"></i> São Paulo
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-dollar-sign mr-1 text-[var(--orange)]"></i> R$ 5.000,00
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-clock mr-1 text-[var(--orange)]"></i> 40h/semana
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-graduation-cap mr-1 text-[var(--orange)]"></i> Superior
+                            </p>
+                        </div>
+                    </div>
+
+                    <button 
+                        onclick="openModal()"
+                        class="text-[var(--orange)] py-1 px-4 rounded-full border border-[var(--orange)] text-[10px] float-right mt-4 font-bold uppercase   hover:bg-[var(--orange)] hover:text-white transition-all duration-300 ease-in-out"
+                    >
+                        Ver mais <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="bg-white p-[6px] rounded-2xl border border-gray-300 w-[280px] h-[320px] hover:shadow-md transition-all duration-300 ease-in-out">
+                    <div class="rounded-xl bg-blue-100 w-full h-[250px] p-4 flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-semibold bg-white py-2 px-4 rounded-full w-fit">20 May, 2023</p>
+                            <p class="text-xs font-semibold mt-4">Amazon</p>
+                            <h3 class="text-lg font-bold uppercase">Desenvolvedor Front-end</h3>
+                        </div>
+
+                        <div class="flex gap-2 flex-wrap mt-2">
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-map-marker-alt mr-1 text-[var(--orange)]"></i> São Paulo
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-dollar-sign mr-1 text-[var(--orange)]"></i> R$ 5.000,00
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-clock mr-1 text-[var(--orange)]"></i> 40h/semana
+                            </p>
+                            <p class="text-xs font-semibold bg-white py-1 px-3 rounded-full w-fit ">
+                                <i class="fas fa-graduation-cap mr-1 text-[var(--orange)]"></i> Superior
+                            </p>
+                        </div>
+                    </div>
+
+                    <button 
+                        onclick="openModal()"
+                        class="text-[var(--orange)] py-1 px-4 rounded-full border border-[var(--orange)] text-[10px] float-right mt-4 font-bold uppercase   hover:bg-[var(--orange)] hover:text-white transition-all duration-300 ease-in-out"
+                    >
+                        Ver mais <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main> 
+
+
+
+    <!-- modal -->
+    <div 
+        class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center backdrop-blur-sm hidden" 
+        onclick="this.style.display='none'"
+    >
+        <div 
+            class="w-[1000px] bg-white h-fit p-8 rounded-lg" 
+            onclick="event.stopPropagation()"
+        >
+            <div class="flex justify-between items-center">
+                <h2 class="font-semibold text-lg uppercase">Auxiliar de Almoxarifado</h2>
+
+                <button 
+                    onclick="document.querySelector('.fixed').style.display = 'none'"
+                    class="cursor-pointer"
+                >
+                    <i class="fas fa-times text-2xl text-[var(--orange)]"></i>
+                </button>
+            </div>
+
+            <div class="flex gap-6 mt-8 text-gray-400 text-sm">
+                <p><i class="fas fa-calendar-alt mr-2"></i>Inscrições até: 24/01/2025</p>
+                <p><i class="fas fa-calendar-alt mr-2"></i>Início: 10/02/2025</p>
+                <p><i class="fas fa-calendar-alt mr-2"></i>Término: 14/03/2025</p>
+            </div>
+
+
+            <h3 class="font-semibold text-base mt-6">Descrição do curso</h3>
+            <p class="text-sm text-gray-600">
+                50% dessas vagas estão destinadas para pessoas negras. DIAS DA SEMANA: TERÇAS, QUINTAS E SEXTAS Visa capacitar o estudante a executar tarefas relacionadas a operações de recebimento, armazenamento, controle de estoque e distribuição de materiais em almoxarifados, armazéns e depósitos das organizações, de forma ética, eficiente e empreendedora, de acordo com as tendências do atual mercado de trabalho.
+            </p>
+
+            <div class="grid grid-cols-3">
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Vagas</h3>
+                    <p class="text-sm text-gray-600">
+                        10
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Modalidade</h3>
+                    <p class="text-sm text-gray-600">
+                        PRESENCIAL
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Idade mínima</h3>
+                    <p class="text-sm text-gray-600">
+                        18
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Requisitos</h3>
+                    <ul class="text-sm text-gray-600">
+                        <li>Ensino médio completo</li>
+                        <li>Experiência na área</li>
+                        <li>Conhecimento em informática</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Benefícios</h3>
+                    <ul class="text-sm text-gray-600">
+                        <li>Salário: R$ 1.500,00</li>
+                        <li>VT</li>
+                        <li>VR</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Local</h3>
+                    <p class="text-sm text-gray-600">
+                        Rua dos Bobos, nº 0, São Paulo - SP
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Contato</h3>
+                    <p class="text-sm text-gray-600">
+                        (11) 9999-9999
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Horário</h3>
+                    <p class="text-sm text-gray-600">
+                        08:00 às 17:00
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-base mt-6">Carga horária</h3>
+                    <p class="text-sm text-gray-600">
+                        220h
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="mt-8">
+                <button class="bg-[var(--orange)] text-white py-2 px-6 rounded-[4px] uppercase font-semibold text-sm">
+                    Quero me inscrever
+                </button>
+
+                <button class="text-[var(--orange)] py-2 px-6 rounded-[4px] uppercase font-semibold text-sm border border-[var(--orange)] ml-4">
+                    Compartilhar <i class="fas fa-share ml-2"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function openModal() {
+        document.querySelector('.fixed').style.display = 'flex';
+    }
+</script>
